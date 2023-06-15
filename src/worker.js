@@ -20,7 +20,7 @@ function main () {
       margin: 0 3px;
     }
     #partial-discussion-header[data-pull-is-open=true] .base-ref {
-      font-size: 22px;
+      font-size: 128px;
       background-color: #FF030038;
       margin: 4px;
     }
