@@ -16,6 +16,9 @@ function main () {
       display: flex;
       align-items: center;
     }
+    #partial-discussion-header[data-pull-is-open=true] div div.flex-auto > *:not(:empty) {
+      margin: 0 3px;
+    }
     #partial-discussion-header[data-pull-is-open=true] .base-ref {
       font-size: 22px;
       background-color: #FF030038;
