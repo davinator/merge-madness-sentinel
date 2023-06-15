@@ -1,0 +1,20 @@
+{
+  "name": "Main PR highlighter",
+  "description": "Makes it more evident when a PR is pointing to main",
+  "homepage_url": "https://github.com/llagerlof/fresh-chrome-extension",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Makes it more evident when a PR is pointing to main"
+  },
+  "background": {
+    "service_worker": "src/worker.js"
+  },
+  "permissions": [
+    "tabs", "scripting"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ]
+}
