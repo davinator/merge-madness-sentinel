@@ -12,15 +12,11 @@ function main () {
   // Adds global CSS to highlight the destination branch
   var style = document.createElement('style');
   style.innerHTML = `
-    #partial-discussion-header[data-pull-is-open=true] div div.flex-auto {
-      display: flex;
-      align-items: center;
-    }
     #partial-discussion-header[data-pull-is-open=true] div div.flex-auto > *:not(:empty) {
       margin: 0 3px;
     }
     #partial-discussion-header[data-pull-is-open=true] .base-ref {
-      font-size: 22px;
+      font-size: 34px;
       background-color: #FF030038;
       margin: 4px;
     }
@@ -36,7 +32,7 @@ function main () {
   const interval = window.setInterval(() => {
     if (checkCount++ > 10) window.clearInterval(interval);
 
-    const mergeButtonContainer = document.querySelector(".merge-message");
+    const mergeButtonContainer = document.querySelector("div[class^='ConfirmMerge-module']");
     if (!mergeButtonContainer) return;
     window.clearInterval(interval);
     const warningMessage = document.createElement('div');
@@ -47,9 +43,9 @@ function main () {
       font-size: 16px;
       padding: 8px;
       border-radius: 8px;
-      margin-bottom: 16px;
+      margin: 16px auto;
     `;
-    mergeButtonContainer.prepend(warningMessage);
+    mergeButtonContainer.append(warningMessage);
   }, 1000);
 }
 
